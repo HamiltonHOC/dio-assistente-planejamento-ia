@@ -1,0 +1,189 @@
+{
+  "aviso": "Exemplo 100% ficticio criado apenas para testar e demonstrar o funcionamento das 6 habilidades e das 5 bases do Planner.",
+  "cenario_teste": {
+    "perfil": "Caso de Teste Ficticio (Estudo / Transicao)",
+    "realidade_semanal": "Trabalho presencial em horario comercial (44h/semana), 1h30 de deslocamento por dia e apenas 6h brutas livres na semana."
+  },
+  "objetivos": [
+    {
+      "id": "OBJ-01",
+      "nome": "Construir e publicar 2 automacoes praticas com IA no GitHub",
+      "categoria": "Estudo",
+      "prazo_final": "8 semanas (56 dias)",
+      "teto_semanal_horas": 6,
+      "capacidade_util_horas": 5,
+      "criterio_sucesso": "2 repositorios publicos no GitHub com fluxo exportado (.json), massa ficticia de teste e README explicando como rodar.",
+      "nao_escopo": [
+        "Nao criar site comercial pago ou sistema de login",
+        "Nao estudar matematica de redes neurais agora",
+        "Nao aprender varias linguagens ao mesmo tempo — focar so em fluxo visual (n8n) + JSON + prompts"
+      ],
+      "status": "Em Execucao"
+    }
+  ],
+  "plano_de_acao": [
+    {
+      "id": "T-01",
+      "objetivo_id": "OBJ-01",
+      "fase": "Fase 1 (Sem. 1-2): Base e Projeto 1",
+      "tarefa": "Instalar n8n local e montar 1 fluxo minimo recebendo dados de teste",
+      "dependencia": null,
+      "esforco_estimado_h": 2.5,
+      "definicao_pronto": "Webhook recebe JSON de teste e salva linha em arquivo/planilha ficticia.",
+      "prioridade": "P1 Critica",
+      "status": "Concluido"
+    },
+    {
+      "id": "T-02",
+      "objetivo_id": "OBJ-01",
+      "fase": "Fase 1 (Sem. 1-2): Base e Projeto 1",
+      "tarefa": "Conectar etapa de IA para classificar 5 chamados ficticios em JSON estruturado",
+      "dependencia": "T-01",
+      "esforco_estimado_h": 2.5,
+      "definicao_pronto": "Prompt devolve JSON valido com categoria e prioridade sem quebrar.",
+      "prioridade": "P1 Critica",
+      "status": "Em Andamento"
+    },
+    {
+      "id": "T-03",
+      "objetivo_id": "OBJ-01",
+      "fase": "Fase 2 (Sem. 3-4): Fechamento Projeto 1",
+      "tarefa": "Tratar erro basico, exportar fluxo e subir Repositorio 1 no GitHub",
+      "dependencia": "T-02",
+      "esforco_estimado_h": 5.0,
+      "definicao_pronto": "Link publico no ar com README e arquivo .json funcionando.",
+      "prioridade": "P1 Critica",
+      "status": "A Fazer"
+    },
+    {
+      "id": "T-04",
+      "objetivo_id": "OBJ-01",
+      "fase": "Fase 3 (Sem. 5-7): Projeto 2",
+      "tarefa": "Montar Projeto 2 (leitor de prazos e resumo semanal em 3 blocos de 2,5h a 4h)",
+      "dependencia": "T-03",
+      "esforco_estimado_h": 12.0,
+      "definicao_pronto": "Fluxo gera resumo semanal limpo usando arquivo de teste.",
+      "prioridade": "P1 Critica",
+      "status": "A Fazer"
+    },
+    {
+      "id": "T-05",
+      "objetivo_id": "OBJ-01",
+      "fase": "Fase 4 (Sem. 8): Revisao Final",
+      "tarefa": "Documentar Projeto 2 e testar ambos os repositorios em aba anonima",
+      "dependencia": "T-04",
+      "esforco_estimado_h": 4.0,
+      "definicao_pronto": "Os 2 links abrem e rodam sem depender de arquivo local privado.",
+      "prioridade": "P1 Critica",
+      "status": "A Fazer"
+    }
+  ],
+  "rotina_semanal": [
+    {
+      "id": "ROT-S1-TER",
+      "semana": "Semana 1",
+      "dia_semana": "Terca",
+      "turno_horario": "20h00-21h30",
+      "horas_livres_h": 1.5,
+      "tarefa_id": "T-01",
+      "carga_alocada_h": 1.5,
+      "margem_imprevisto": false,
+      "executado_h": 1.5
+    },
+    {
+      "id": "ROT-S1-QUI",
+      "semana": "Semana 1",
+      "dia_semana": "Quinta",
+      "turno_horario": "20h00-21h30",
+      "horas_livres_h": 1.5,
+      "tarefa_id": "T-01 / T-02",
+      "carga_alocada_h": 1.5,
+      "margem_imprevisto": false,
+      "executado_h": 1.0
+    },
+    {
+      "id": "ROT-S1-SAB-MANHA",
+      "semana": "Semana 1",
+      "dia_semana": "Sabado",
+      "turno_horario": "09h00-11h00",
+      "horas_livres_h": 2.0,
+      "tarefa_id": "T-02",
+      "carga_alocada_h": 2.0,
+      "margem_imprevisto": false,
+      "executado_h": 1.0
+    },
+    {
+      "id": "ROT-S1-SAB-MARGEM",
+      "semana": "Semana 1",
+      "dia_semana": "Sabado",
+      "turno_horario": "11h00-12h00",
+      "horas_livres_h": 1.0,
+      "tarefa_id": null,
+      "carga_alocada_h": 0.0,
+      "margem_imprevisto": true,
+      "executado_h": 0.0
+    }
+  ],
+  "obstaculos_plano_b": [
+    {
+      "id": "OBS-01",
+      "objetivo_id": "OBJ-01",
+      "obstaculo": "Chegar morto do trabalho as 20h e perder tempo procurando onde parou",
+      "probabilidade": "Alta",
+      "impacto": "Medio",
+      "gatilho_alerta": "Abrir aula comprida as 20h15 sem saber o proximo passo pratico",
+      "plano_b": "Sessao seca de 15 min: rodar 1 teste simples no fluxo aberto e anotar o ponto de parada para sabado."
+    },
+    {
+      "id": "OBS-02",
+      "objetivo_id": "OBJ-01",
+      "obstaculo": "Erro de JSON ou autenticacao travar o horario inteiro",
+      "probabilidade": "Alta",
+      "impacto": "Alto",
+      "gatilho_alerta": "Passar de 25 minutos preso no mesmo erro",
+      "plano_b": "Parar de tentar no escuro, jogar erro + payload no Claude/Gemini ou usar dado estatico (mock) para testar o resto."
+    },
+    {
+      "id": "OBS-03",
+      "objetivo_id": "OBJ-01",
+      "obstaculo": "Imprevisto no emprego ou familia engolir a manha de sabado",
+      "probabilidade": "Media",
+      "impacto": "Alto",
+      "gatilho_alerta": "Ver ate sexta a noite que sabado furou",
+      "plano_b": "Usar apenas o bloco de margem ou reduzir o escopo semanal mantendo 1 entrega pequena fechada."
+    },
+    {
+      "id": "OBS-04",
+      "objetivo_id": "OBJ-01",
+      "obstaculo": "Inventar funcao nova no meio da Semana 3 e nunca publicar o Projeto 1",
+      "probabilidade": "Media",
+      "impacto": "Alto",
+      "gatilho_alerta": "Vontade de fazer tela bonita ou trocar de ferramenta antes do commit final",
+      "plano_b": "Olhar o campo nao_escopo de OBJ-01 e jogar a ideia nova num arquivo de anotacoes para depois."
+    }
+  ],
+  "revisoes_progresso": [
+    {
+      "id": "REV-00-FENIX",
+      "objetivo_id": "OBJ-01",
+      "tipo": "Tribunal Fenix (Pre-Dia 1)",
+      "periodo": "Pre-Execucao",
+      "horas_planejadas": null,
+      "horas_executadas": null,
+      "taxa_aderencia_pct": null,
+      "causa_raiz_desvio": "3 acusacoes: (1) T-04 com 12h num bloco so vai estourar o prazo; (2) cota gratuita de API externa pode travar teste no sabado; (3) bloco de 1,5h a noite rende menos que o de sabado de manha.",
+      "ajuste_proxima_semana": "Fatiar T-04 em blocos de no maximo 2,5h e usar arquivo mock sempre que configuracao de API travar."
+    },
+    {
+      "id": "REV-S01",
+      "objetivo_id": "OBJ-01",
+      "tipo": "Check-in Semanal",
+      "periodo": "Semana 1",
+      "horas_planejadas": 5.0,
+      "horas_executadas": 3.5,
+      "taxa_aderencia_pct": 70,
+      "causa_raiz_desvio": "Desvio controlavel (70%). Na quinta houve atraso de 30min no trabalho e no sabado o erro de JSON comeu 45 minutos sem acionar o gatilho de 25min do OBS-02.",
+      "ajuste_proxima_semana": "Nao dobrar carga na Semana 2. Manter teto de 5h uteis + 1h de margem, fechar T-02 na terca e respeitar cronometro de 25min em erro tecnico."
+    }
+  ]
+}
